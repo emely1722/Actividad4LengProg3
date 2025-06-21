@@ -1,4 +1,4 @@
-namespace Actividad3LengProg3.Models
+namespace Actividad4LengProg3.Models
 {
     public class ErrorViewModel
     {
