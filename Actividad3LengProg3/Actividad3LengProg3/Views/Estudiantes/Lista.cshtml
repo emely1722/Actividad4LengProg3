@@ -1,0 +1,76 @@
+﻿
+@{
+}
+
+@model List<EstudianteViewModel>
+
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+@if (TempData["MensajeError"] != null)
+{
+    <div class="alert alert-danger">@TempData["MensajeError"]</div>
+}
+
+<h4>
+    Lista de Estudiantes
+</h4>
+
+<form asp-action="Lista" method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="matricula" class="form-control" placeholder="Buscar una matrícula" value="@Context.Request.Query["Matricula"]" />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre completo del estudiante</th>
+                    <th>Matrícula</th>
+                    <th>Carrera</th>
+                    <th>Correo Institucional</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Género</th>
+                    <th>Turno</th>
+                    <th>Tipo de Ingreso</th>
+                    <th>¿Tienes beca?</th>
+                    <th>Porcentaje de Beca</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var it in Model)
+                    {
+                        <tr>
+                            <td>@it.nombre_estudiante</td>
+                            <td>@it.matricula_estudiante</td>
+                            <td>@it.carrera_estudiante</td>
+                            <td>@it.correo_estudiante</td>
+                            <td>@it.telefono_estudiante</td>
+                            <td>@it.fecha_nacimiento</td>
+                            <td>@it.genero_estudiante</td>
+                            <td>@it.turno</td>
+                            <td>@it.tipo_ingreso</td>
+                            <td>@it.becado</td>
+                            <td>@it.porcentaje_beca</td>
+                            <td>
+                            <a asp-action="Editar" asp-route-matricula="@it.matricula_estudiante" class="btn btn-secondary">Editar</a>
+                            <a asp-action="Eliminar" asp-route-matricula="@it.matricula_estudiante" class="btn btn-danger">Eliminar</a>
+                            </td>
+
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
