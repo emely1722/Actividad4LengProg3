@@ -2,7 +2,7 @@
 
 namespace Actividad4LengProg3.Controllers
 {
-    public class MateriaController : Controller
+    public class MateriasController : Controller
     {
         public IActionResult Index()
         {

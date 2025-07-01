@@ -1,6 +1,8 @@
 ﻿using Actividad4LengProg3.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection.Metadata.Ecma335;
+using System;
+using Microsoft.EntityFrameworkCore;
 namespace Actividad3LengProg3.Controllers
 
 {
