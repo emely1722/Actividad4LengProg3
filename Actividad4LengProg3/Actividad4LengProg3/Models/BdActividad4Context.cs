@@ -17,7 +17,7 @@ public partial class BdActividad4Context : DbContext
 
     public virtual DbSet<Calificacione> Calificaciones { get; set; }
 
-    public virtual DbSet<Estudiante> Estudiantes { get; set; }
+    public virtual DbSet<EstudianteViewModel> Estudiantes { get; set; }
 
     public virtual DbSet<Materia> Materias { get; set; }
 

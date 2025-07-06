@@ -6,6 +6,11 @@
 
 @model EstudianteViewModel
 
+@{
+	ViewBag.Tittle = "Editar Estudiante";
+	Layout = "/Views/Shared/LayoutEstudiantes.cshtml";
+}
+
 <h2>
 	Editar Estudiante
 </h2>
@@ -31,9 +36,17 @@
 
 
 	<div>
-		<label asp-for="carrera_estudiante"></label>
-		<select asp-for="carrera_estudiante" asp-items="Model.carreras" class="form-control"></select>
-		<span asp-validation-for="carrera_estudiante" class="text-danger"></span>
+		<label class="form-label" asp-for="carreras"></label>
+		<select class="form-select" asp-for="carreras" asp-items="@(new SelectList (
+                                                                                                         new[] { "Ingeniería de Software",
+                                                                                                                 "Contabilidad",
+                                                                                                                 "Enfermería",
+                                                                                                                 "Odontología",
+                                                                                                                 "Derecho" }
+                                                                                                                  ))">
+			<option value="">-- Seleccione una carrera --</option>
+		</select>
+		<span asp-validation-for="carreras" class="text-danger"></span>
 	</div>
 
 
@@ -67,15 +80,28 @@
 
 
 	<div>
-		<label asp-for="turno"></label>
-		<select asp-for="turno" asp-items="Model.turnos" class="form-control"></select>
+		<label class="form-label" asp-for="turno"></label>
+		<select class="form-select" asp-for="turno" asp-items="@(new SelectList(
+                                                                                                     new[] { "Matutino",
+                                                                                                             "Vespertino",
+                                                                                                             "Nocturno" }
+                                                                                                            ))">
+			<option value="">-- Seleccione turno --</option>
+		</select>
 		<span asp-validation-for="turno" class="text-danger"></span>
 	</div>
 
 
 	<div>
-		<label asp-for="tipo_ingreso"></label>
-		<select asp-for="tipo_ingreso" asp-items="Model.ingreso" class="form-control"></select>
+		<label class="form-label" asp-for="tipo_ingreso">Tipo de Ingreso</label>
+		<select class="form-select" asp-for="tipo_ingreso" asp-items="@(new SelectList(
+                                                                                                                 new[] { "Nuevo Ingreso",
+                                                                                                                         "Ingreso por Transferencia",
+                                                                                                                         "Reingreso",
+																														 "Doctorado"}
+                                                                                                                        ))">
+			<option value="">-- Seleccione tipo de ingreso --</option>
+		</select>
 		<span asp-validation-for="tipo_ingreso" class="text-danger"></span>
 	</div>
 
