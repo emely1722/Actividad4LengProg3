@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\actividad3lengprog3\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|solutionrelative:actividad3lengprog3\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|c:\\users\\emely\\documents\\github\\actividad4lengprog3\\actividad3lengprog3\\views\\estudiantes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|solutionrelative:actividad3lengprog3\\views\\estudiantes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\actividad3lengprog3\\models\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|solutionrelative:actividad3lengprog3\\models\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\actividad3lengprog3\\models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|solutionrelative:actividad3lengprog3\\models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\actividad3lengprog3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|solutionrelative:actividad3lengprog3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\actividad3lengprog3\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|solutionrelative:actividad3lengprog3\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\actividad3lengprog3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3246CF68-2E08-4AD9-8698-78CDE5B36F79}|Actividad3LengProg3\\Actividad4LengProg3.csproj|solutionrelative:actividad3lengprog3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EstudianteViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Models\\EstudianteViewModel.cs",
+              "RelativeDocumentMoniker": "Actividad3LengProg3\\Models\\EstudianteViewModel.cs",
+              "ToolTip": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Models\\EstudianteViewModel.cs",
+              "RelativeToolTip": "Actividad3LengProg3\\Models\\EstudianteViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T04:24:03.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Views\\Estudiantes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Actividad3LengProg3\\Views\\Estudiantes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Views\\Estudiantes\\Index.cshtml",
+              "RelativeToolTip": "Actividad3LengProg3\\Views\\Estudiantes\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-06T04:06:15.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Actividad3LengProg3\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Actividad3LengProg3\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T23:21:39.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Program.cs",
+              "RelativeDocumentMoniker": "Actividad3LengProg3\\Program.cs",
+              "ToolTip": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Program.cs",
+              "RelativeToolTip": "Actividad3LengProg3\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T23:30:04.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Estudiante.cs",
+              "DocumentMoniker": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Models\\Estudiante.cs",
+              "RelativeDocumentMoniker": "Actividad3LengProg3\\Models\\Estudiante.cs",
+              "ToolTip": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Models\\Estudiante.cs",
+              "RelativeToolTip": "Actividad3LengProg3\\Models\\Estudiante.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T23:26:45.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstudiantesController.cs",
+              "DocumentMoniker": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Controllers\\EstudiantesController.cs",
+              "RelativeDocumentMoniker": "Actividad3LengProg3\\Controllers\\EstudiantesController.cs",
+              "ToolTip": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Controllers\\EstudiantesController.cs",
+              "RelativeToolTip": "Actividad3LengProg3\\Controllers\\EstudiantesController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAkwFsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T23:26:15.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Actividad3LengProg3\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Emely\\Documents\\GitHub\\Actividad4LengProg3\\Actividad3LengProg3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Actividad3LengProg3\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-06T04:09:15.396Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
