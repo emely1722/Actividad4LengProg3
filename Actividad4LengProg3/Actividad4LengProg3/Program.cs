@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Actividad4LengProg3.Models;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//builder.Services.AddDbContext<AppDbContext>(options =>
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionDB")));
+builder.Services.AddDbContext<BdActividad4Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionDB")));
 
 var app = builder.Build();
 
