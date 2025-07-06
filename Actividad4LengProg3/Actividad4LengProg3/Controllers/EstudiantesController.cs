@@ -1,21 +1,10 @@
-﻿using Actividad4LengProg3.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
-using System;
-using Microsoft.EntityFrameworkCore;
-using Actividad4LengProg3.Data;
-namespace Actividad3LengProg3.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using Actividad4LengProg3.Models;
 
+namespace Actividad4LengProg3.Controllers
 {
     public class EstudiantesController : Controller
     {
-        private readonly AppDbContext _context;
-
-        public EstudiantesController(AppDbContext context)
-        {
-            _context = context;
-        }
-
         private static List<EstudianteViewModel> estudiantes = new List<EstudianteViewModel>();
 
         public IActionResult Index()
@@ -87,22 +76,7 @@ namespace Actividad3LengProg3.Controllers
         public IActionResult Lista()
 
         {
-            var lista = _context.ESTUDIANTES.Select (equals => new EstudianteViewModel()
-            {
-                nombre_estudiante = equals.nombre_estudiante,
-                matricula_estudiante = equals.matricula_estudiante,
-                carrera_estudiante = equals.carrera_estudiante,
-                correo_estudiante = equals.correo_estudiante,
-                telefono_estudiante = equals.telefono_estudiante,
-                fecha_nacimiento = equals.fecha_nacimiento,
-                genero_estudiante = equals.telefono_estudiante,
-                turno = equals.turno,
-                tipo_ingreso = equals.tipo_ingreso,
-                becado = equals.becado,
-                porcentaje_beca = equals.porcentaje_beca,
-
-            }).ToList();
-            return View(Lista);
+            return View(estudiantes);
         }
 
 

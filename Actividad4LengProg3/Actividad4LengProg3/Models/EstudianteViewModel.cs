@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Actividad4LengProg3.Models
 {
     public class EstudianteViewModel
@@ -32,8 +31,8 @@ namespace Actividad4LengProg3.Models
 
 
         [Required(ErrorMessage = "Correo Obligatorio.")]
-        [EmailAddress (ErrorMessage = "Correo no válido")]
-        [Display (Name= "Correo Institucional")]
+        [EmailAddress(ErrorMessage = "Correo no válido")]
+        [Display(Name = "Correo Institucional")]
         public string correo_estudiante { get; set; }
 
 
@@ -44,17 +43,17 @@ namespace Actividad4LengProg3.Models
 
 
         [Required(ErrorMessage = "Escriba su fecha de nacimiento")]
-        [DataType (DataType.Date)]
+        [DataType(DataType.Date)]
         [Display(Name = "Fecha de Nacimiento")]
         public DateTime fecha_nacimiento { get; set; }
 
         [Required]
-        [Display (Name = "Genero")]
+        [Display(Name = "Genero")]
         public string genero_estudiante { get; set; }
 
 
-        [Required (ErrorMessage = "Elige Turno")]
-        [Display (Name = "Turno")]
+        [Required(ErrorMessage = "Elige Turno")]
+        [Display(Name = "Turno")]
         public string turno { get; set; }
         public List<SelectListItem> turnos { get; } = new List<SelectListItem>
     {
@@ -64,8 +63,8 @@ namespace Actividad4LengProg3.Models
     };
 
 
-        [Required (ErrorMessage = "Tipo de Ingreso")]
-        [Display (Name = "Tipo de Ingreso")]
+        [Required(ErrorMessage = "Tipo de Ingreso")]
+        [Display(Name = "Tipo de Ingreso")]
         public string tipo_ingreso { get; set; }
         public List<SelectListItem> ingreso { get; } = new List<SelectListItem>
     {
@@ -76,14 +75,14 @@ namespace Actividad4LengProg3.Models
     };
 
 
-        [Display (Name = "¿Tienes beca?")]
+        [Display(Name = "¿Tienes beca?")]
         public bool becado { get; set; }
 
 
 
 
-		[Display(Name = "Agrege su porcentaje de beca.")]
-		[Range(0, 100)]
+        [Display(Name = "Agrege su porcentaje de beca.")]
+        [Range(0, 100)]
         public int? porcentaje_beca { get; set; }
 
 
