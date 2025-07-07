@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Actividad4LengProg3.Models;
+﻿using Actividad4LengProg3.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Reflection;
 
 namespace Actividad4LengProg3.Controllers
 {
@@ -26,94 +26,23 @@ namespace Actividad4LengProg3.Controllers
             if (ModelState.IsValid)
             {
                 _context.Estudiantes.Add(estudiante);
-                _context.SaveChanges();
+                _context.SaveChanges(); 
                 TempData["Mensaje"] = "Estudiante registrado exitosamente.";
-                return RedirectToAction("Lista");
+                return RedirectToAction("Index");
             }
-            return View("Lista");
+            return View(estudiante);
         }
 
 
-        [HttpPost]
-        public IActionResult Editar(EstudianteViewModel estudiante)
+        public IActionResult Lista()
         {
-            var original = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == estudiante.matricula_estudiante);
 
-            if (original == null)
-            {
-                TempData["Mensaje"] = "No existe el usuario indicado";
-                return RedirectToAction("Lista");
-            }
+            var estudiantes = _context.Estudiantes.ToList();
+            return View(estudiantes);
 
-            original.nombre_estudiante = estudiante.nombre_estudiante;
-            original.carrera_estudiante = estudiante.carrera_estudiante;
-            original.correo_estudiante = estudiante.correo_estudiante;
-            original.telefono_estudiante = estudiante.telefono_estudiante;
-            original.fecha_nacimiento = estudiante.fecha_nacimiento;
-            original.genero_estudiante = estudiante.genero_estudiante;
-            original.turno = estudiante.turno;
-            original.tipo_ingreso = estudiante.tipo_ingreso;
-            original.porcentaje_beca = estudiante.porcentaje_beca;
-            original.becado = estudiante.becado;
-            original.terminos_condiciones = estudiante.terminos_condiciones;
-
-
-            _context.Update(original);
-            _context.SaveChanges();
-            TempData["Mensaje"] = "Datos editados correctamente";
-
-            return RedirectToAction("Lista");
         }
-
-
-
-
-
-        [HttpPost]
-        public IActionResult Eliminar(string matricula)
-        {
-            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == matricula);
-
-            if (estudiante == null)
-            {
-                _context.Estudiantes.Remove(estudiante);
-                _context.SaveChanges();
-                TempData["Mensaje"] = "Estudiante eliminado exitosamente.";
-            }
-            else
-            {
-                TempData["Mensaje"] = "No se encontró el estudiante.";
-            }
-
-            return RedirectToAction("Lista");
-        }
-
-        [HttpPost]
-        public IActionResult ConfirmacionEliminar (string matricula)
-        {
-            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == matricula);
-            if (estudiante != null)
-            {
-                _context.Estudiantes.Remove(estudiante);
-                _context.SaveChanges();
-                TempData["Mensaje"] = "Estudiante eliminado satisfactoriamente";
-            }
-
-            return RedirectToAction("Lista");
-        }
-
-
 
         [HttpGet]
-		public IActionResult Lista()
-		{
-			var estudiantes = _context.Estudiantes.ToList();
-			return View(estudiantes);
-		}
-
-
-
-		[HttpGet]
         public IActionResult Editar(string matricula)
         {
             var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == matricula);
@@ -125,6 +54,71 @@ namespace Actividad4LengProg3.Controllers
 
             return View(estudiante);
         }
+
+
+
+        [HttpPost]
+        public IActionResult Editar(EstudianteViewModel estudiante)
+        {
+            if (ModelState.IsValid)
+            {
+                var original = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == estudiante.matricula_estudiante);
+
+                if (original == null)
+                {
+                    TempData["Mensaje"] = "No existe el usuario indicado";
+                    return RedirectToAction("Lista");
+                }
+
+                
+                original.nombre_estudiante = estudiante.nombre_estudiante;
+                original.carrera_estudiante = estudiante.carrera_estudiante;
+                original.correo_estudiante = estudiante.correo_estudiante;
+                original.telefono_estudiante = estudiante.telefono_estudiante;
+                original.fecha_nacimiento = estudiante.fecha_nacimiento;
+                original.genero_estudiante = estudiante.genero_estudiante;
+                original.turno = estudiante.turno;
+                original.tipo_ingreso = estudiante.tipo_ingreso;
+                original.porcentaje_beca = estudiante.porcentaje_beca;
+                original.becado = estudiante.becado;
+                original.terminos_condiciones = estudiante.terminos_condiciones;
+
+                _context.Update(original); 
+                _context.SaveChanges();    
+
+                TempData["Mensaje"] = "Actualizaciones exitosas";
+                return RedirectToAction("Lista");
+            }
+
+            return View(estudiante);
+        }
+
+
+
+        public IActionResult Eliminar(string matricula)
+        {
+            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == matricula);
+            if (estudiante == null)
+            {
+                TempData["Mensaje"] = "No existe el usuario indicado";
+                return RedirectToAction("Lista");
+            }
+            return View(estudiante);
+        }
+
+        [HttpPost]
+        public IActionResult EliminarConfirmado(string matricula)
+        {
+            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == matricula);
+            if (estudiante != null)
+            {
+                _context.Estudiantes.Remove(estudiante);
+                _context.SaveChanges(); 
+                TempData["Mensaje"] = "Estudiante eliminado correctamente";
+            }
+
+            return RedirectToAction("Lista");
+        }
+
     }
 }
-

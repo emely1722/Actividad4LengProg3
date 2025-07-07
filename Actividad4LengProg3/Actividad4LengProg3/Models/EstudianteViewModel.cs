@@ -1,96 +1,64 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.ComponentModel.DataAnnotations;
-
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Actividad4LengProg3.Models
 {
     public class EstudianteViewModel
     {
-        [Required(ErrorMessage = "Nombre es obligatorio")]
-        [StringLength(100)]
-        [Display(Name = "Nombre completo del estudiante")]
+        [Required(ErrorMessage = "Ingrese nombre completo")]
+        [StringLength(100, ErrorMessage = "Nombre Obligatorio")]
+        [Column("nombre_estudiante")]
         public string nombre_estudiante { get; set; }
 
-
-
+        [Key]
         [Required(ErrorMessage = "Matricula es obligatoria")]
-        [StringLength(20), MinLength(6)]
-        [Display(Name = "Matrícula")]
+        [StringLength(15, MinimumLength = 6, ErrorMessage = "La matrícula debe tener entre 6 y 15 caracteres.")]
+        [Column("matricula_estudiante")]
         public string matricula_estudiante { get; set; }
 
-
-
         [Required(ErrorMessage = "Eliga una carrera")]
-        [Display(Name = "Carrera")]
+        [Column("carrera_estudiante")]
         public string carrera_estudiante { get; set; }
-        public List<SelectListItem> carreras { get; } = new List<SelectListItem>
-    {
-        new SelectListItem { Value = "Ingeniería en Software", Text = "Ingeniería en Software" },
-        new SelectListItem { Value = "Administración de Empresas", Text = "Administración de Empresas" },
-        new SelectListItem { Value = "Odontología", Text = "Odontología" },
-    };
 
-
-        [Required(ErrorMessage = "Correo Obligatorio.")]
+        [Required(ErrorMessage = "Correo obligatorio")]
         [EmailAddress(ErrorMessage = "Correo no válido")]
-        [Display(Name = "Correo Institucional")]
+        [Column("correo_estudiante")]
         public string correo_estudiante { get; set; }
 
-
-        [Phone]
-        [MinLength(10)]
-        [Display(Name = "Número")]
+        [Phone(ErrorMessage = "Ingrese numero de telefono")]
+        [MinLength(10, ErrorMessage = "El teléfono debe tener al menos 10 dígitos.")]
+        [Column("telefono_estudiante")]
         public string telefono_estudiante { get; set; }
-
 
         [Required(ErrorMessage = "Escriba su fecha de nacimiento")]
         [DataType(DataType.Date)]
-        [Display(Name = "Fecha de Nacimiento")]
+        [Column("fecha_nacimiento")]
         public DateTime fecha_nacimiento { get; set; }
 
-        [Required]
-        [Display(Name = "Genero")]
+
+        [Required(ErrorMessage = "Seleccione")]
+        [Column("genero_estudiante")]
         public string genero_estudiante { get; set; }
 
 
-        [Required(ErrorMessage = "Elige Turno")]
-        [Display(Name = "Turno")]
+        [Required(ErrorMessage = "Elige turno")]
+        [Column("turno")]
         public string turno { get; set; }
-        public List<SelectListItem> turnos { get; } = new List<SelectListItem>
-    {
-        new SelectListItem { Value = "Matutino", Text = "Matutino" },
-        new SelectListItem { Value = "Vespertino", Text = "Vespertino" },
-        new SelectListItem { Value = "Nocturno", Text = "Nocturno" }
-    };
 
-
-        [Required(ErrorMessage = "Tipo de Ingreso")]
-        [Display(Name = "Tipo de Ingreso")]
+        [Required(ErrorMessage = "Seleccione Ingreso")]
+        [Column("tipo_ingreso")]
         public string tipo_ingreso { get; set; }
-        public List<SelectListItem> ingreso { get; } = new List<SelectListItem>
-    {
-        new SelectListItem { Value = "Nuevo Ingreso", Text = "Nuevo Ingreso" },
-        new SelectListItem { Value = "Ingreso por Transferencia", Text = "Ingreso por Transferencia" },
-        new SelectListItem { Value = "Reingreso", Text = "Reingreso" },
-        new SelectListItem { Value = "Doctorado", Text = "Doctorado" }
-    };
 
-
-        [Display(Name = "¿Tienes beca?")]
+        [Column("becado")]
         public bool becado { get; set; }
 
 
+        [Range(0, 100, ErrorMessage = "Debe agregar su porcentaje")]
+        [Column("porcentaje_beca")]
+        public int porcentaje_beca { get; set; }
 
-
-        [Display(Name = "Agrege su porcentaje de beca.")]
-        [Range(0, 100)]
-        public int? porcentaje_beca { get; set; }
-
-
-
-        [Range(typeof(bool), "true", "true", ErrorMessage = "Acepte los términos y condiciones!!.")]
-        [Display(Name = "Acepte términos y condiciones.")]
-        public bool terminos_condiciones { get; set; }
-
+        [Required(ErrorMessage = "Debe aceptar los términos y condiciones.")]
+        [Column("terminos_condiciones")]
+        public string terminos_condiciones { get; set; }
 
     }
 }
