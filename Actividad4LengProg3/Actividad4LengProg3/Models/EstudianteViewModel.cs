@@ -58,7 +58,7 @@ namespace Actividad4LengProg3.Models
 
         [Required(ErrorMessage = "Debe aceptar los términos y condiciones.")]
         [Column("terminos_condiciones")]
-        public string terminos_condiciones { get; set; }
+        public bool terminos_condiciones { get; set; }
 
     }
 }

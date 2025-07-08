@@ -98,27 +98,17 @@ namespace Actividad4LengProg3.Controllers
         public IActionResult Eliminar(string matricula)
         {
             var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == matricula);
-            if (estudiante == null)
+            if (estudiante != null)
             {
-                TempData["Mensaje"] = "No existe el usuario indicado";
+                _context.Estudiantes.Remove(estudiante);
+                _context.SaveChanges();
+                TempData["Mensaje"] = "Estudiante eliminado satisfactoriamente.";
                 return RedirectToAction("Lista");
             }
             return View(estudiante);
         }
 
-        [HttpPost]
-        public IActionResult EliminarConfirmado(string matricula)
-        {
-            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matricula_estudiante == matricula);
-            if (estudiante != null)
-            {
-                _context.Estudiantes.Remove(estudiante);
-                _context.SaveChanges(); 
-                TempData["Mensaje"] = "Estudiante eliminado correctamente";
-            }
 
-            return RedirectToAction("Lista");
-        }
 
     }
 }

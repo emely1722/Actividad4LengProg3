@@ -24,24 +24,24 @@
     </div>
 
     <div>
-        <label class="form-label" asp-for="matricula_estudiante"></label>
+        <label class="form-label" asp-for="matricula_estudiante">Matricula</label>
         <input class="form-control" asp-for="matricula_estudiante" />
         <span asp-validation-for="matricula_estudiante" class="text-danger"></span>
     </div>
 
+
     <div>
-        <label class="form-label" asp-for="carrera_estudiante"></label>
+        <label class="form-label" asp-for="carrera_estudiante">Carreras</label>
         <select class="form-select" asp-for="carrera_estudiante" asp-items="@(new SelectList (
-                                                                                                             new[] { "Ingeniería de Software",
-                                                                                                                     "Contabilidad",
-                                                                                                                     "Enfermería",
-                                                                                                                     "Odontología",
-                                                                                                                     "Derecho" }
-                                                                                                                      ))">
-            <option value="">-- Seleccione una carrera --</option>
+            new[] { "Ingeniería de Software",
+            "Administración de Empresas",
+            "Odontología"}
+                   ))">
+            <option value="">Seleccione una carrera</option>
         </select>
         <span asp-validation-for="carrera_estudiante" class="text-danger"></span>
     </div>
+
 
     <div>
         <label class="form-label" asp-for="correo_estudiante">Correo Institucional</label>
@@ -50,7 +50,7 @@
     </div>
 
     <div>
-        <label class="form-label" asp-for="telefono_estudiante"></label>
+        <label class="form-label" asp-for="telefono_estudiante">Teléfono</label>
         <input class="form-control" asp-for="telefono_estudiante" />
         <span asp-validation-for="telefono_estudiante" class="text-danger"></span>
     </div>
@@ -65,18 +65,18 @@
         <label class="form-label">Género:</label><br />
         <input asp-for="genero_estudiante" type="radio" value="Masculino" /> Masculino
         <input asp-for="genero_estudiante" type="radio" value="Femenino" /> Femenino
-        @* <input  asp-for="Genero" type="radio" value="Otro" /> Otro *@
+       
         <span asp-validation-for="genero_estudiante" class="text-danger"></span>
     </div>
 
     <div>
-        <label class="form-label" asp-for="turno"></label>
+        <label class="form-label" asp-for="turno">Turno</label>
         <select class="form-select" asp-for="turno" asp-items="@(new SelectList(
-                                                                                                         new[] { "Mañana",
-                                                                                                                 "Tarde",
-                                                                                                                 "Noche" }
-                                                                                                                 ))">
-            <option value="">-- Seleccione turno --</option>
+		new[] { "Matutino",
+                "Vespertino",
+                "Nocturno" }
+			))">
+            <option value="">Seleccione turno</option>
         </select>
         <span asp-validation-for="turno" class="text-danger"></span>
     </div>
@@ -84,17 +84,18 @@
     <div>
         <label class="form-label" asp-for="tipo_ingreso">Tipo de Ingreso</label>
         <select class="form-select" asp-for="tipo_ingreso" asp-items="@(new SelectList(
-                                                                                                                     new[] { "Nuevo Ingreso",
-                                                                                                                             "Reingreso",
-                                                                                                                             "Transferencia" }
-                                                                                                                             ))">
-            <option value="">-- Seleccione tipo de ingreso --</option>
+        new[] { "Nuevo Ingreso",
+                "Ingreso por Transferencia",
+                "Reingreso",
+				"Doctorado"}
+               ))">
+            <option value="">Seleccione tipo de ingreso</option>
         </select>
         <span asp-validation-for="tipo_ingreso" class="text-danger"></span>
     </div>
 
     <div>
-        <label class="form-label" asp-for="becado">¿Esta Becado?</label>
+        <label class="form-label" asp-for="becado">¿Está Becado?</label>
         <input class="form-check-input" asp-for="becado" type="checkbox" />
     </div>
 
@@ -107,7 +108,7 @@
     <div class="form-check">
         <input class="form-control" type="hidden" asp-for="terminos_condiciones" value="true" />
         <input class="form-check-input" type="checkbox" asp-for="terminos_condiciones" value="true" />
-        <label class="form-check-label" asp-for="terminos_condiciones">Acepto los términos y condiciones</label>
+        <label class="form-check-label" asp-for="terminos_condiciones">Acepte los términos y condiciones</label>
         <span asp-validation-for="terminos_condiciones" class="text-danger"></span>
 
 

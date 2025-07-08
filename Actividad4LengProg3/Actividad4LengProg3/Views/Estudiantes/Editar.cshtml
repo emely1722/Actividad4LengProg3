@@ -32,15 +32,13 @@
 
 
 	<div>
-		<label class="form-label" asp-for="carrera_estudiante">Carrera</label>
+		<label class="form-label" asp-for="carrera_estudiante">Carreras</label>
 		<select class="form-select" asp-for="carrera_estudiante" asp-items="@(new SelectList (
-                                                                                                         new[] { "Ingeniería de Software",
-                                                                                                                 "Contabilidad",
-                                                                                                                 "Enfermería",
-                                                                                                                 "Odontología",
-                                                                                                                 "Derecho" }
-                                                                                                                  ))">
-			<option value="">Seleccione una carrera </option>
+            new[] { "Ingeniería de Software",
+            "Administración de Empresas",
+            "Odontología"}
+                   ))">
+			<option value="">Seleccione una carrera</option>
 		</select>
 		<span asp-validation-for="carrera_estudiante" class="text-danger"></span>
 	</div>
@@ -78,10 +76,10 @@
 	<div>
 		<label class="form-label" asp-for="turno">Turno</label>
 		<select class="form-select" asp-for="turno" asp-items="@(new SelectList(
-                                                                                                     new[] { "Matutino",
-                                                                                                             "Vespertino",
-                                                                                                             "Nocturno" }
-                                                                                                            ))">
+		new[] { "Matutino",
+                "Vespertino",
+                "Nocturno" }
+			))">
 			<option value="">Seleccione turno</option>
 		</select>
 		<span asp-validation-for="turno" class="text-danger"></span>
@@ -91,11 +89,11 @@
 	<div>
 		<label class="form-label" asp-for="tipo_ingreso">Tipo de Ingreso</label>
 		<select class="form-select" asp-for="tipo_ingreso" asp-items="@(new SelectList(
-                                                                                                                 new[] { "Nuevo Ingreso",
-                                                                                                                         "Ingreso por Transferencia",
-                                                                                                                         "Reingreso",
-																														 "Doctorado"}
-                                                                                                                        ))">
+        new[] { "Nuevo Ingreso",
+                "Ingreso por Transferencia",
+                "Reingreso",
+				"Doctorado"}
+               ))">
 			<option value="">Seleccione tipo de ingreso</option>
 		</select>
 		<span asp-validation-for="tipo_ingreso" class="text-danger"></span>

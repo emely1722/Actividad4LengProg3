@@ -26,10 +26,4 @@
         <li><strong>Correo:</strong> @Model.correo_estudiante</li>
     </ul>
 
-    <form asp-action="ConfirmacionEliminar" method="post">
-        <input type="hidden" name="matricula" value="@Model.matricula_estudiante" />
-        <button class="btn btn-danger" type="submit">Eliminar</button>
-        <a class="btn btn-success" href="/Estudiantes/Lista">Cancelar</a>
-    </form>
-
 </div>
