@@ -12,6 +12,12 @@ namespace Actividad4LengProg3.Controllers
             _context = context;
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         public IActionResult Registrar(MateriaViewModel materia)
         {
@@ -19,7 +25,7 @@ namespace Actividad4LengProg3.Controllers
             {
                 _context.Materias.Add(materia); 
                 _context.SaveChanges();
-                TempData["Mensaje"] = "Materia registrada con éxito";
+                TempData["Mensaje"] = "Materia registrada correctamente.";
                 return RedirectToAction("Lista");   
             }
                 return View(materia);
@@ -31,6 +37,8 @@ namespace Actividad4LengProg3.Controllers
             return View(materias);
         }
 
+
+        [HttpGet]
         public IActionResult Editar(string cod)
         {
             var materia = _context.Materias.FirstOrDefault(m => m.codigo == cod);
@@ -43,6 +51,8 @@ namespace Actividad4LengProg3.Controllers
             return View(materia);
         }
 
+
+        [HttpPost]
         public IActionResult Editar(MateriaViewModel materia) 
         {
             
@@ -80,6 +90,12 @@ namespace Actividad4LengProg3.Controllers
                 TempData["Mensaje"] = "Materia Inexistente";
                 return RedirectToAction("Lista");
             }
+
+            _context.Materias.Remove(materia);
+            _context.SaveChanges();
+            TempData["Mensaje"] = "Materia eliminada correctamente.";
+            return RedirectToAction("Lista");
+
 
             return View(materia);
         }

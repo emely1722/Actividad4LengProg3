@@ -25,24 +25,22 @@
 
 <div class="container mb-3">
     <form class="form-control" action="/Materias/Editar" method="post">
-        <input type="hidden" name="Matricula" value="@Model.codigo" />
-
         <div>
             <label class="form-label">Código:</label>
-            <input class="form-control" type="text" name="Codigo" value="@Model.codigo" />
+            <input class="form-control" type="text" name="codigo" value="@Model.codigo" />
         </div>
 
 
 
         <div>
             <label class="form-label">Nombre:</label>
-            <input class="form-control" type="text" name="Nombre" value="@Model.nombre_materia" />
+            <input class="form-control" type="text" name="nombre_materia" value="@Model.nombre_materia" />
         </div>
 
 
         <div>
             <label class="form-label">Creditos:</label>
-            <input class="form-control" type="number" min="1" max="10" name="Creditos" value="@Model.creditos" />
+            <input class="form-control" type="number" min="1" max="10" name="creditos" value="@Model.creditos" />
         </div>
 
         <div>
@@ -59,6 +57,8 @@
 
         <br />
 
+
+        <input type="hidden" asp-for="codigo" />
         <button class="btn btn-success" type="submit">Guardar</button>
         <a class="btn btn-danger" href="/Materias/Lista">Cancelar</a>
     </form>
