@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>
+    Eliminar Materia
+</h2>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<div class="container">
+
+    <ul>
+        <li><strong>Codigo:</strong> @Model.codigo</li>
+        <li><strong>Nombre:</strong> @Model.nombre_materia</li>
+        <li><strong>Creditos:</strong> @Model.creditos</li>
+        <li><strong>Carrera:</strong> @Model.carrera</li>
+    </ul>
+
+    <form asp-action="EliminarConfirmado" method="post">
+        <input type="hidden" name="codigo" value="@Model.codigo" />
+        <button class="btn btn-danger" type="submit">Eliminar</button>
+        <a class="btn btn-success" href="/Materias/Lista">Cancelar</a>
+    </form>
+
+</div>

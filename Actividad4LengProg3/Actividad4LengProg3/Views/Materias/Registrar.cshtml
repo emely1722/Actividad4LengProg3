@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Actividad4LengProg3.Models.MateriaViewModel
+
+
+<h2>
+    Registro de Materias
+</h2>
+
+<br />
+
+@if (TempData["Mensaje"] !=null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<div class="container mb-3">
+    <from class="form-control" asp-action="Registrar" asp-controller="nombre_materia" method="post">
+        <div>
+            <label class="form-label" asp-for="codigo">Codigo de la Materia</label>
+            <input class="form-control" asp-for="codigo" />
+            <span asp-validation-for="codigo" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="form-label" asp-for="nombre_materia">Nombre de la Materia</label>
+            <input class="form-control" asp-for="nombre_materia" />
+            <span asp-validation-for="nombre_materia" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="form-label" asp-for="creditos">Creditos</label>
+            <input class="form-control" asp-for="creditos" type="number" min="1" max="10" />
+            <span asp-validation-for="creditos" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="form-label" asp-for="carrera">Carreras</label>
+            <select class="form-select" asp-for="carrera" asp-items="@(new SelectList (
+            new[] { "Ingeniería de Software",
+            "Administración de Empresas",
+            "Odontología"}
+                   ))">
+                <option value="">Seleccione una carrera</option>
+            </select>
+            <span asp-validation-for="carrera" class="text-danger"></span>
+        </div>
+
+        <br />
+
+
+        <div>
+            <button class="btn btn-primary" type="submit">Registrar</button>
+        </div>
+    </from>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
