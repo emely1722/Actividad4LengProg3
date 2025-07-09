@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@model List<Actividad4LengProg3.Models.CalificacionViewModel>
+
+<h2>
+    Lista de Calificaciones
+</h2>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class=" table table-hover">
+        <thead>
+            <tr>
+                <th>Matricula</th>
+                <th>Codigo de la Materia</th>
+                <th>Nota</th>
+                <th>Periodo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cali in Model)
+            {
+                <tr>
+                    <td>@cali.MATRICULA_ESTUDIANTE</td>
+                    <td>@cali.CODIGO_MATERIA</td>
+                    <td>@cali.NOTA</td>
+                    <td>@cali.PERIODO</td>
+                    <td>
+                        <a class="btn btn-success m-2" href="/Calificaciones/Editar?id=@cali.ID">Editar</a>
+                        <a class="btn btn-danger" href="/Calificaciones/Eliminar?id=@cali.ID">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

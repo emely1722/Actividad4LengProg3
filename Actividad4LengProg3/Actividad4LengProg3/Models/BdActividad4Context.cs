@@ -14,6 +14,8 @@ public class BdActividad4Context : DbContext
 
     public DbSet<EstudianteViewModel> Estudiantes { get; set; }
     public DbSet<MateriaViewModel> Materias { get; set; }
+
+    public DbSet<CalificacionViewModel> Calificaciones { get; set; }
+
 }
 
-  
