@@ -105,5 +105,3 @@ namespace Actividad4LengProg3.Controllers
 
 
 
-//Emely Ferreras Acosta
-//SD-2023-04969

@@ -37,6 +37,3 @@ namespace Actividad4LengProg3.Models
 
 
 
-
-//Emely Ferreras Acosta
-//SD-2023-04969
