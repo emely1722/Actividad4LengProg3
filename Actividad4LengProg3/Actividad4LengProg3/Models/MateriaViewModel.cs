@@ -34,3 +34,9 @@ namespace Actividad4LengProg3.Models
         public string carrera { get; set;}
     }
 }
+
+
+
+
+//Emely Ferreras Acosta
+//SD-2023-04969
