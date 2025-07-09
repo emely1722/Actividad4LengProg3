@@ -15,7 +15,7 @@
     <div class="alert alert-success">@TempData["Mensaje"]</div>
 }
 
-<form class="form-control" asp-action="Registrar" asp-controller="Calificaciones" method="post">
+<form asp-action="Registrar" asp-controller="Calificaciones" method="post">
     <div>
         <label class="form-label" asp-for="MATRICULA_ESTUDIANTE">MatriculaEstudiante</label>
         <input class="form-control" asp-for="MATRICULA_ESTUDIANTE" />

@@ -18,7 +18,3 @@ public class BdActividad4Context : DbContext
     public DbSet<CalificacionViewModel> Calificaciones { get; set; }
 
 }
-
-
-//Emely Ferreras Acosta
-//SD-2023-04969
